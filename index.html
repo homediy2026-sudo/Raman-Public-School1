@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Raman Public School - English Medium School in Sahjanwa, Uttar Pradesh. Shaping Young Minds for a Brighter Future.">
+<meta name="keywords" content="Raman Public School, Sahjanwa, Ghanshyam Nagar, school admission, English medium school UP">
+<title>Raman Public School – English Medium | Sahjanwa, U.P.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a2463;
+    --blue: #1e5fa8;
+    --sky: #3a86d8;
+    --accent: #f5c518;
+    --green: #2ecc71;
+    --green-dark: #27ae60;
+    --white: #ffffff;
+    --off-white: #f8faff;
+    --gray-light: #eef2f9;
+    --gray: #7a8aa0;
+    --text: #1a2535;
+    --text-light: #4a5568;
+    --border: #dce6f5;
+    --shadow: 0 4px 24px rgba(10,36,99,0.10);
+    --shadow-lg: 0 12px 48px rgba(10,36,99,0.18);
+    --radius: 12px;
+    --radius-lg: 20px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.25; }
+
+  /* ─── NAVBAR ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(10,36,99,0.97);
+    backdrop-filter: blur(10px);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 70px;
+    box-shadow: 0 2px 20px rgba(10,36,99,0.3);
+    transition: background 0.3s;
+  }
+
+  .nav-brand {
+    display: flex; align-items: center; gap: 12px; text-decoration: none;
+    cursor: pointer;
+  }
+
+  .nav-logo {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #f39c12);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 700; color: var(--navy);
+    font-family: 'Playfair Display', serif;
+    flex-shrink: 0;
+  }
+
+  .nav-name {
+    display: flex; flex-direction: column;
+  }
+  .nav-name span:first-child {
+    color: white; font-weight: 600; font-size: 15px; letter-spacing: 0.3px;
+    font-family: 'Playfair Display', serif;
+  }
+  .nav-name span:last-child {
+    color: var(--accent); font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  }
+
+  .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
+  .nav-links a {
+    color: rgba(255,255,255,0.85); text-decoration: none; font-size: 13.5px;
+    font-weight: 500; padding: 8px 14px; border-radius: 8px;
+    transition: all 0.2s; cursor: pointer; letter-spacing: 0.2px;
+  }
+  .nav-links a:hover, .nav-links a.active {
+    color: white; background: rgba(255,255,255,0.15);
+  }
+
+  .nav-cta {
+    background: var(--accent) !important; color: var(--navy) !important;
+    font-weight: 600 !important; padding: 9px 18px !important;
+  }
+  .nav-cta:hover { background: #e6b800 !important; }
+
+  .hamburger {
+    display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px;
+  }
+  .hamburger span { width: 24px; height: 2px; background: white; border-radius: 2px; transition: 0.3s; }
+
+  .mobile-menu {
+    display: none; position: fixed; top: 70px; left: 0; right: 0;
+    background: var(--navy); padding: 20px; z-index: 999;
+    flex-direction: column; gap: 4px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    color: rgba(255,255,255,0.85); padding: 12px 16px; border-radius: 8px;
+    text-decoration: none; font-size: 15px; font-weight: 500;
+    transition: background 0.2s; cursor: pointer;
+  }
+  .mobile-menu a:hover { background: rgba(255,255,255,0.1); color: white; }
+
+  /* ─── PAGE SYSTEM ─── */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative; min-height: 100vh;
+    display: flex; align-items: center;
+    overflow: hidden; padding-top: 70px;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(10,36,99,0.88) 0%, rgba(30,95,168,0.82) 50%, rgba(10,36,99,0.90) 100%);
+    z-index: 1;
+  }
+
+  .hero-img {
+    position: absolute; inset: 0; object-fit: cover;
+    width: 100%; height: 100%;
+    filter: brightness(0.55);
+    z-index: 0;
+  }
+
+  .hero-pattern {
+    position: absolute; inset: 0; z-index: 2; opacity: 0.04;
+    background-image: repeating-linear-gradient(45deg, white 0, white 1px, transparent 0, transparent 50%);
+    background-size: 20px 20px;
+  }
+
+  .hero-content {
+    position: relative; z-index: 3;
+    max-width: 1200px; margin: 0 auto; padding: 80px 5%;
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-block; background: rgba(245,197,24,0.2);
+    border: 1px solid rgba(245,197,24,0.5);
+    color: var(--accent); font-size: 12px; letter-spacing: 3px;
+    text-transform: uppercase; padding: 7px 20px; border-radius: 50px;
+    margin-bottom: 28px; font-weight: 600;
+    animation: fadeDown 0.8s ease both;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    color: white; margin-bottom: 16px;
+    animation: fadeDown 0.8s ease 0.15s both;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+
+  .hero h1 span { color: var(--accent); }
+
+  .hero-tagline {
+    font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+    color: rgba(255,255,255,0.88); margin-bottom: 20px;
+    font-style: italic; font-family: 'Playfair Display', serif;
+    animation: fadeDown 0.8s ease 0.3s both;
+  }
+
+  .hero-desc {
+    font-size: 15px; color: rgba(255,255,255,0.72);
+    max-width: 640px; margin: 0 auto 40px;
+    animation: fadeDown 0.8s ease 0.45s both; line-height: 1.8;
+  }
+
+  .hero-btns {
+    display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+    animation: fadeDown 0.8s ease 0.6s both;
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 30px; border-radius: 50px; font-size: 14.5px;
+    font-weight: 600; text-decoration: none; cursor: pointer;
+    border: 2px solid transparent; transition: all 0.25s;
+    letter-spacing: 0.3px;
+  }
+
+  .btn-primary {
+    background: var(--accent); color: var(--navy); border-color: var(--accent);
+  }
+  .btn-primary:hover { background: #e6b800; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,197,24,0.4); }
+
+  .btn-outline {
+    background: transparent; color: white; border-color: rgba(255,255,255,0.6);
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.12); border-color: white; transform: translateY(-2px); }
+
+  .btn-blue {
+    background: var(--blue); color: white; border-color: var(--blue);
+  }
+  .btn-blue:hover { background: var(--navy); transform: translateY(-2px); box-shadow: var(--shadow); }
+
+  .btn-green {
+    background: var(--green); color: white; border-color: var(--green);
+  }
+  .btn-green:hover { background: var(--green-dark); transform: translateY(-2px); }
+
+  /* ─── STATS STRIP ─── */
+  .stats-strip {
+    background: white; box-shadow: var(--shadow-lg);
+    padding: 32px 5%; margin-top: -2px;
+    position: relative; z-index: 10;
+  }
+
+  .stats-grid {
+    max-width: 900px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 0; text-align: center;
+  }
+
+  .stat-item {
+    padding: 10px 20px; border-right: 1px solid var(--border);
+  }
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-size: 2.2rem; font-weight: 700;
+    color: var(--navy); font-family: 'Playfair Display', serif;
+    display: block; line-height: 1;
+  }
+  .stat-label { font-size: 12px; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 80px 5%; }
+
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  .section-label {
+    display: inline-block; font-size: 11px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--sky); font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-size: clamp(1.7rem, 4vw, 2.5rem); color: var(--navy);
+    margin-bottom: 16px;
+  }
+
+  .section-sub {
+    font-size: 16px; color: var(--text-light); max-width: 580px;
+    line-height: 1.8; margin-bottom: 50px;
+  }
+
+  .divider {
+    width: 60px; height: 4px; border-radius: 2px;
+    background: linear-gradient(90deg, var(--blue), var(--accent));
+    margin-bottom: 20px;
+  }
+
+  /* ─── ABOUT SECTION (Home) ─── */
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 60px; align-items: center;
+  }
+
+  .about-img-wrap {
+    position: relative; border-radius: var(--radius-lg); overflow: hidden;
+    box-shadow: var(--shadow-lg);
+  }
+  .about-img-wrap img { width: 100%; height: 380px; object-fit: cover; display: block; }
+  .about-badge-overlay {
+    position: absolute; bottom: 20px; left: 20px;
+    background: var(--navy); color: white;
+    padding: 12px 20px; border-radius: 10px;
+    font-size: 13px; font-weight: 600;
+  }
+  .about-badge-overlay span { color: var(--accent); display: block; font-size: 22px; font-family: 'Playfair Display', serif; }
+
+  .checklist { list-style: none; margin-bottom: 28px; }
+  .checklist li {
+    padding: 8px 0; font-size: 15px; color: var(--text-light);
+    display: flex; align-items: center; gap: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before {
+    content: '✓'; width: 24px; height: 24px; border-radius: 50%;
+    background: rgba(46,204,113,0.12); color: var(--green-dark);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; flex-shrink: 0;
+  }
+
+  /* ─── HIGHLIGHTS ─── */
+  .highlights-bg { background: var(--off-white); }
+
+  .highlights-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  }
+
+  .highlight-card {
+    background: white; border-radius: var(--radius-lg); padding: 36px 28px;
+    text-align: center; box-shadow: var(--shadow); border: 1px solid var(--border);
+    transition: all 0.3s; position: relative; overflow: hidden;
+  }
+  .highlight-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--blue), var(--sky));
+    transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
+  }
+  .highlight-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+  .highlight-card:hover::before { transform: scaleX(1); }
+
+  .highlight-icon {
+    font-size: 2.5rem; margin-bottom: 16px; display: block;
+  }
+  .highlight-card h3 {
+    font-size: 1.1rem; color: var(--navy); margin-bottom: 10px;
+  }
+  .highlight-card p { font-size: 13.5px; color: var(--gray); line-height: 1.7; }
+
+  /* ─── PAGE HERO (inner pages) ─── */
+  .page-hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+    padding: 100px 5% 60px; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .page-hero::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 0, transparent 50%);
+    background-size: 20px 20px;
+  }
+  .page-hero h1 { color: white; font-size: clamp(1.8rem, 4vw, 3rem); margin-bottom: 12px; position: relative; }
+  .page-hero p { color: rgba(255,255,255,0.75); font-size: 16px; position: relative; }
+
+  .breadcrumb {
+    display: flex; justify-content: center; align-items: center; gap: 8px;
+    font-size: 13px; color: rgba(255,255,255,0.6);
+    margin-bottom: 16px; position: relative;
+  }
+  .breadcrumb a { color: var(--accent); cursor: pointer; text-decoration: none; }
+  .breadcrumb span { color: rgba(255,255,255,0.4); }
+
+  /* ─── ABOUT PAGE ─── */
+  .values-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+    margin-top: 40px;
+  }
+  .value-card {
+    background: var(--off-white); border-radius: var(--radius); padding: 28px 22px;
+    text-align: center; border: 1px solid var(--border); transition: all 0.3s;
+  }
+  .value-card:hover { background: var(--navy); }
+  .value-card:hover h3, .value-card:hover p { color: white; }
+  .value-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+  .value-card h3 { font-size: 1rem; color: var(--navy); margin-bottom: 8px; }
+  .value-card p { font-size: 13px; color: var(--gray); }
+
+  .principal-card {
+    background: linear-gradient(135deg, var(--navy), var(--blue));
+    border-radius: var(--radius-lg); padding: 48px;
+    display: flex; gap: 40px; align-items: flex-start;
+    color: white; margin-top: 50px;
+  }
+  .principal-avatar {
+    width: 90px; height: 90px; border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2.5rem; flex-shrink: 0;
+    border: 3px solid rgba(255,255,255,0.3);
+  }
+  .principal-card p { color: rgba(255,255,255,0.85); font-size: 15px; line-height: 1.85; font-style: italic; margin-bottom: 20px; }
+  .principal-name { font-weight: 600; font-size: 16px; color: var(--accent); }
+  .principal-title { font-size: 13px; color: rgba(255,255,255,0.6); }
+
+  /* ─── ACADEMICS ─── */
+  .classes-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+    margin-bottom: 50px;
+  }
+  .class-badge {
+    background: var(--off-white); border: 2px solid var(--border);
+    border-radius: var(--radius); padding: 18px 16px; text-align: center;
+    transition: all 0.25s; cursor: default;
+  }
+  .class-badge:hover { border-color: var(--blue); background: var(--blue); color: white; }
+  .class-badge span { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gray); margin-bottom: 4px; }
+  .class-badge:hover span { color: rgba(255,255,255,0.7); }
+  .class-badge strong { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); }
+  .class-badge:hover strong { color: white; }
+
+  .features-list { display: flex; flex-direction: column; gap: 12px; }
+  .feature-item {
+    display: flex; align-items: flex-start; gap: 16px;
+    background: var(--off-white); border-radius: var(--radius); padding: 18px 22px;
+    border-left: 4px solid var(--blue); transition: all 0.25s;
+  }
+  .feature-item:hover { transform: translateX(6px); }
+  .feature-item .fi-icon { font-size: 1.4rem; flex-shrink: 0; }
+  .feature-item h4 { font-size: 1rem; color: var(--navy); margin-bottom: 4px; font-family: 'DM Sans', sans-serif; font-weight: 600; }
+  .feature-item p { font-size: 13.5px; color: var(--text-light); }
+
+  .activities-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    margin-top: 40px;
+  }
+  .activity-card {
+    background: white; border-radius: var(--radius); padding: 24px;
+    box-shadow: var(--shadow); border: 1px solid var(--border); text-align: center;
+    transition: all 0.3s;
+  }
+  .activity-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .activity-card .icon { font-size: 2rem; margin-bottom: 12px; }
+  .activity-card h3 { font-size: 1rem; color: var(--navy); margin-bottom: 6px; font-family: 'DM Sans', sans-serif; font-weight: 600; }
+  .activity-card p { font-size: 13px; color: var(--gray); }
+
+  /* ─── ADMISSIONS ─── */
+  .steps-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+    position: relative; margin-bottom: 60px;
+  }
+  .steps-grid::before {
+    content: ''; position: absolute; top: 28px; left: 10%; right: 10%;
+    height: 2px; background: linear-gradient(90deg, var(--blue), var(--sky));
+    z-index: 0;
+  }
+  .step-item { text-align: center; padding: 0 16px; position: relative; z-index: 1; }
+  .step-num {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: var(--navy); color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem; font-weight: 700; margin: 0 auto 18px;
+    border: 3px solid white; box-shadow: 0 0 0 3px var(--blue);
+    font-family: 'Playfair Display', serif;
+  }
+  .step-item h3 { font-size: 1rem; color: var(--navy); margin-bottom: 8px; font-family: 'DM Sans', sans-serif; font-weight: 600; }
+  .step-item p { font-size: 13px; color: var(--gray); }
+
+  .docs-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+  }
+  .doc-item {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--off-white); border-radius: var(--radius); padding: 16px 20px;
+    border: 1px solid var(--border);
+  }
+  .doc-icon {
+    width: 42px; height: 42px; border-radius: 8px;
+    background: linear-gradient(135deg, var(--blue), var(--sky));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; flex-shrink: 0;
+  }
+  .doc-item strong { font-size: 14px; color: var(--navy); display: block; }
+  .doc-item span { font-size: 12.5px; color: var(--gray); }
+
+  /* ─── FORM ─── */
+  .form-card {
+    background: white; border-radius: var(--radius-lg); padding: 48px;
+    box-shadow: var(--shadow-lg); border: 1px solid var(--border);
+    max-width: 640px; margin: 0 auto;
+  }
+  .form-card h2 { font-size: 1.7rem; color: var(--navy); margin-bottom: 8px; }
+  .form-card p { font-size: 14px; color: var(--gray); margin-bottom: 32px; }
+  .form-group { margin-bottom: 20px; }
+  .form-group label { display: block; font-size: 13.5px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 13px 16px; border: 1.5px solid var(--border);
+    border-radius: 10px; font-size: 14.5px; font-family: 'DM Sans', sans-serif;
+    color: var(--text); transition: border-color 0.2s; outline: none;
+    background: var(--off-white);
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--blue); background: white; box-shadow: 0 0 0 3px rgba(30,95,168,0.1);
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  /* ─── FACULTY ─── */
+  .faculty-intro {
+    background: linear-gradient(135deg, var(--navy), var(--blue));
+    border-radius: var(--radius-lg); padding: 50px; color: white; margin-bottom: 50px;
+    display: flex; gap: 40px; align-items: center;
+  }
+  .faculty-intro-icon { font-size: 4rem; }
+  .faculty-intro p { color: rgba(255,255,255,0.85); font-size: 15.5px; line-height: 1.85; }
+
+  .teacher-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .teacher-card {
+    background: white; border-radius: var(--radius-lg); padding: 32px 24px;
+    text-align: center; box-shadow: var(--shadow); border: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  .teacher-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+  .teacher-avatar {
+    width: 80px; height: 80px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2.2rem; margin: 0 auto 16px;
+    background: var(--off-white); border: 3px solid var(--border);
+  }
+  .teacher-card h3 { font-size: 1.05rem; color: var(--navy); margin-bottom: 4px; font-family: 'DM Sans', sans-serif; font-weight: 600; }
+  .teacher-card .subject { font-size: 12.5px; color: var(--sky); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+  .teacher-card p { font-size: 13px; color: var(--gray); }
+
+  .quality-pillars {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 50px;
+  }
+  .pillar {
+    background: var(--off-white); border-radius: var(--radius); padding: 28px 22px;
+    border-top: 3px solid var(--blue); transition: all 0.3s;
+  }
+  .pillar:hover { background: var(--navy); }
+  .pillar:hover h3, .pillar:hover p { color: white; }
+  .pillar .p-icon { font-size: 1.8rem; margin-bottom: 12px; }
+  .pillar h3 { font-size: 1rem; color: var(--navy); margin-bottom: 8px; font-family: 'DM Sans', sans-serif; font-weight: 600; }
+  .pillar p { font-size: 13.5px; color: var(--gray); }
+
+  /* ─── GALLERY ─── */
+  .gallery-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    margin-top: 20px;
+  }
+  .gallery-item {
+    border-radius: var(--radius-lg); overflow: hidden;
+    box-shadow: var(--shadow); position: relative; cursor: pointer;
+  }
+  .gallery-item img {
+    width: 100%; height: 240px; object-fit: cover;
+    display: block; transition: transform 0.4s;
+  }
+  .gallery-item:hover img { transform: scale(1.06); }
+  .gallery-item .g-label {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(10,36,99,0.85), transparent);
+    color: white; padding: 20px 16px 14px; font-size: 13px; font-weight: 600;
+    transform: translateY(100%); transition: transform 0.3s;
+  }
+  .gallery-item:hover .g-label { transform: translateY(0); }
+  .gallery-item.large { grid-column: span 2; }
+  .gallery-item.large img { height: 320px; }
+
+  /* ─── FACILITIES ─── */
+  .facilities-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;
+  }
+  .facility-card {
+    background: white; border-radius: var(--radius-lg); padding: 36px;
+    box-shadow: var(--shadow); border: 1px solid var(--border);
+    display: flex; gap: 24px; align-items: flex-start; transition: all 0.3s;
+  }
+  .facility-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--sky); }
+  .facility-icon {
+    width: 64px; height: 64px; border-radius: 14px;
+    background: linear-gradient(135deg, var(--navy), var(--blue));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.8rem; flex-shrink: 0;
+  }
+  .facility-card h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: 8px; font-family: 'DM Sans', sans-serif; font-weight: 600; }
+  .facility-card p { font-size: 13.5px; color: var(--text-light); line-height: 1.75; }
+
+  /* ─── CONTACT ─── */
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1.4fr; gap: 50px; align-items: start;
+  }
+  .contact-info-card {
+    background: linear-gradient(145deg, var(--navy), var(--blue));
+    border-radius: var(--radius-lg); padding: 44px; color: white;
+  }
+  .contact-info-card h2 { font-size: 1.6rem; margin-bottom: 10px; }
+  .contact-info-card .sub { color: rgba(255,255,255,0.7); font-size: 14px; margin-bottom: 36px; }
+  .ci-item { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 28px; }
+  .ci-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: rgba(255,255,255,0.12);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; flex-shrink: 0;
+  }
+  .ci-item strong { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); margin-bottom: 4px; }
+  .ci-item p { color: rgba(255,255,255,0.85); font-size: 14px; line-height: 1.65; }
+  .ci-item a { color: rgba(255,255,255,0.85); text-decoration: none; }
+  .ci-item a:hover { color: var(--accent); }
+
+  .map-wrap {
+    border-radius: var(--radius-lg); overflow: hidden;
+    box-shadow: var(--shadow); margin-top: 28px;
+    border: 3px solid rgba(255,255,255,0.15);
+  }
+  .map-wrap iframe { width: 100%; height: 220px; display: block; border: none; }
+
+  /* ─── CTA SECTION ─── */
+  .cta-section {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+    padding: 80px 5%; text-align: center; position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 0, transparent 50%);
+    background-size: 20px 20px;
+  }
+  .cta-section h2 { font-size: clamp(1.6rem, 3.5vw, 2.5rem); color: white; margin-bottom: 14px; position: relative; }
+  .cta-section p { color: rgba(255,255,255,0.75); font-size: 16px; margin-bottom: 36px; position: relative; }
+  .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: #060e1e;
+    padding: 64px 5% 0;
+    color: rgba(255,255,255,0.65);
+  }
+  .footer-grid {
+    display: grid; grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
+    gap: 40px; padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand .nav-logo { width: 50px; height: 50px; font-size: 20px; margin-bottom: 16px; }
+  .footer-brand h3 { color: white; font-size: 1.2rem; margin-bottom: 8px; }
+  .footer-brand p { font-size: 13.5px; line-height: 1.8; margin-bottom: 20px; }
+  .footer-col h4 { color: white; font-size: 14px; font-weight: 600; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 1px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13.5px; cursor: pointer; transition: color 0.2s; }
+  .footer-col ul a:hover { color: var(--accent); }
+  .footer-contact-item { display: flex; gap: 10px; margin-bottom: 14px; align-items: flex-start; }
+  .footer-contact-item .icon { font-size: 15px; margin-top: 2px; }
+  .footer-contact-item p { font-size: 13px; line-height: 1.6; }
+  .footer-bottom {
+    padding: 20px 0; display: flex; justify-content: space-between;
+    align-items: center; font-size: 12.5px;
+  }
+  .footer-bottom a { color: var(--accent); text-decoration: none; }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up {
+    animation: fadeUp 0.7s ease both;
+  }
+
+  /* ─── NOTICE BAR ─── */
+  .notice-bar {
+    background: var(--accent); color: var(--navy);
+    padding: 10px 5%; text-align: center;
+    font-size: 13.5px; font-weight: 600; letter-spacing: 0.3px;
+    position: fixed; top: 70px; left: 0; right: 0; z-index: 999;
+  }
+  .notice-bar span { font-weight: 700; margin-right: 8px; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 992px) {
+    .highlights-grid { grid-template-columns: repeat(2, 1fr); }
+    .about-grid { grid-template-columns: 1fr; gap: 36px; }
+    .values-grid { grid-template-columns: repeat(2, 1fr); }
+    .classes-grid { grid-template-columns: repeat(3, 1fr); }
+    .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+    .steps-grid::before { display: none; }
+    .teacher-grid { grid-template-columns: repeat(2, 1fr); }
+    .quality-pillars { grid-template-columns: repeat(2, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-item.large { grid-column: span 2; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-item:nth-child(2) { border-right: none; }
+    .stat-item:nth-child(1), .stat-item:nth-child(2) { border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+    .facilities-grid { grid-template-columns: 1fr; }
+    .activities-grid { grid-template-columns: repeat(2, 1fr); }
+    .principal-card { flex-direction: column; align-items: center; text-align: center; }
+  }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .highlights-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    section { padding: 60px 5%; }
+    .classes-grid { grid-template-columns: repeat(2, 1fr); }
+    .docs-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .teacher-grid { grid-template-columns: 1fr; }
+    .quality-pillars { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-item.large { grid-column: span 1; }
+    .gallery-item.large img { height: 240px; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    .activities-grid { grid-template-columns: 1fr; }
+    .values-grid { grid-template-columns: 1fr 1fr; }
+    .form-card { padding: 32px 24px; }
+    .faculty-intro { flex-direction: column; text-align: center; }
+    .hero-btns { flex-direction: column; align-items: center; }
+    .notice-bar { font-size: 12px; top: 70px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="notice-bar" id="noticeBar">
+  <span>🎉 Admissions Open 2025-26!</span>
+  Limited seats available — <a href="#" onclick="showPage('admissions');return false;" style="color:var(--navy); text-decoration:underline;">Apply Now</a> or call 081740 89013
+</div>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-brand" onclick="showPage('home')">
+    <div class="nav-logo">R</div>
+    <div class="nav-name">
+      <span>Raman Public School</span>
+      <span>English Medium</span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')" id="nav-home" class="active">Home</a></li>
+    <li><a onclick="showPage('about')" id="nav-about">About Us</a></li>
+    <li><a onclick="showPage('academics')" id="nav-academics">Academics</a></li>
+    <li><a onclick="showPage('faculty')" id="nav-faculty">Faculty</a></li>
+    <li><a onclick="showPage('facilities')" id="nav-facilities">Facilities</a></li>
+    <li><a onclick="showPage('gallery')" id="nav-gallery">Gallery</a></li>
+    <li><a onclick="showPage('contact')" id="nav-contact">Contact</a></li>
+    <li><a onclick="showPage('admissions')" id="nav-admissions" class="nav-cta">Admissions</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="showPage('home');toggleMobile()">🏠 Home</a>
+  <a onclick="showPage('about');toggleMobile()">📖 About Us</a>
+  <a onclick="showPage('academics');toggleMobile()">🎓 Academics</a>
+  <a onclick="showPage('faculty');toggleMobile()">👩‍🏫 Faculty</a>
+  <a onclick="showPage('facilities');toggleMobile()">🏫 Facilities</a>
+  <a onclick="showPage('gallery');toggleMobile()">📷 Gallery</a>
+  <a onclick="showPage('admissions');toggleMobile()">✅ Admissions</a>
+  <a onclick="showPage('contact');toggleMobile()">📞 Contact Us</a>
+</div>
+
+<!-- ═══════════════════════════════════════
+     HOME PAGE
+═══════════════════════════════════════ -->
+<div class="page active" id="page-home" style="padding-top: 38px;">
+
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero-img" src="/mnt/user-data/uploads/1000055309.png" alt="Raman Public School Building">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <div class="hero-badge">📌 Admissions Open 2025–26</div>
+      <h1>Raman <span>Public School</span></h1>
+      <p class="hero-tagline">"Shaping Young Minds for a Brighter Future"</p>
+      <p class="hero-desc">Providing quality education with discipline, values, and modern learning methods to help students achieve academic excellence and personal growth.</p>
+      <div class="hero-btns">
+        <a class="btn btn-primary" onclick="showPage('admissions')">📋 Admissions Open</a>
+        <a class="btn btn-outline" onclick="showPage('contact')">📞 Contact Us</a>
+        <a class="btn btn-outline" onclick="showPage('about')">Learn More →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-num">10+</span>
+        <span class="stat-label">Years of Excellence</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">500+</span>
+        <span class="stat-label">Students Enrolled</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">25+</span>
+        <span class="stat-label">Qualified Teachers</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">12</span>
+        <span class="stat-label">Classes Offered</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WELCOME / ABOUT SECTION -->
+  <section>
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <img src="/mnt/user-data/uploads/1000055309.png" alt="Raman Public School Gate">
+          <div class="about-badge-overlay">
+            <span>10+</span>
+            Years Serving Education
+          </div>
+        </div>
+        <div>
+          <span class="section-label">Welcome to Raman Public School</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Nurturing Excellence,<br>Building Character</h2>
+          <p style="color:var(--text-light); font-size:15px; margin-bottom:24px; line-height:1.85;">
+            Raman Public School is a dedicated educational institution committed to nurturing young minds through quality teaching, strong moral values, and a disciplined learning environment. We believe that education is not only about academics but also about character building and holistic development.
+          </p>
+          <ul class="checklist">
+            <li>Experienced & Dedicated Teachers</li>
+            <li>Student-Centered Learning Approach</li>
+            <li>Safe & Disciplined Environment</li>
+            <li>Focus on Academic & Moral Growth</li>
+            <li>Affordable Quality Education</li>
+          </ul>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a class="btn btn-blue" onclick="showPage('about')">Our Story</a>
+            <a class="btn btn-green" onclick="showPage('admissions')">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="highlights-bg">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:48px;">
+        <span class="section-label">What We Offer</span>
+        <div class="divider" style="margin:12px auto 16px;"></div>
+        <h2 class="section-title">Why Choose Raman Public School?</h2>
+      </div>
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <span class="highlight-icon">🎓</span>
+          <h3>Quality Education</h3>
+          <p>Well-structured curriculum aligned with modern educational standards ensuring strong academic foundations for every student.</p>
+        </div>
+        <div class="highlight-card">
+          <span class="highlight-icon">👩‍🏫</span>
+          <h3>Experienced Teachers</h3>
+          <p>Our qualified and passionate faculty brings dedicated personal attention to each student's learning journey.</p>
+        </div>
+        <div class="highlight-card">
+          <span class="highlight-icon">🏛️</span>
+          <h3>Discipline & Values</h3>
+          <p>We instill strong moral values, responsibility, and discipline that shape students into responsible citizens.</p>
+        </div>
+        <div class="highlight-card">
+          <span class="highlight-icon">🌱</span>
+          <h3>Holistic Development</h3>
+          <p>Beyond academics, we focus on co-curricular activities, sports, and cultural programs for complete development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK HIGHLIGHTS -->
+  <section>
+    <div class="container" style="text-align:center;">
+      <span class="section-label">Our Approach</span>
+      <div class="divider" style="margin:12px auto 16px;"></div>
+      <h2 class="section-title" style="margin-bottom:12px;">A School Built for Every Child</h2>
+      <p class="section-sub" style="margin: 0 auto 50px;">We provide the right environment, resources, and guidance for every child to discover their potential and excel.</p>
+      <div style="display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:20px;">
+        <div style="background:var(--off-white); border-radius:var(--radius); padding:24px; border:1px solid var(--border);">
+          <div style="font-size:2rem;margin-bottom:10px;">🎓</div>
+          <strong style="color:var(--navy); font-size:15px;">Well-Structured Curriculum</strong>
+          <p style="font-size:13px;color:var(--gray);margin-top:6px;">NCERT-aligned, concept-based learning</p>
+        </div>
+        <div style="background:var(--off-white); border-radius:var(--radius); padding:24px; border:1px solid var(--border);">
+          <div style="font-size:2rem;margin-bottom:10px;">👩‍🏫</div>
+          <strong style="color:var(--navy); font-size:15px;">Qualified Faculty</strong>
+          <p style="font-size:13px;color:var(--gray);margin-top:6px;">Trained & experienced educators</p>
+        </div>
+        <div style="background:var(--off-white); border-radius:var(--radius); padding:24px; border:1px solid var(--border);">
+          <div style="font-size:2rem;margin-bottom:10px;">📚</div>
+          <strong style="color:var(--navy); font-size:15px;">Concept-Based Learning</strong>
+          <p style="font-size:13px;color:var(--gray);margin-top:6px;">Understanding over memorization</p>
+        </div>
+        <div style="background:var(--off-white); border-radius:var(--radius); padding:24px; border:1px solid var(--border);">
+          <div style="font-size:2rem;margin-bottom:10px;">🏫</div>
+          <strong style="color:var(--navy); font-size:15px;">Clean & Safe Campus</strong>
+          <p style="font-size:13px;color:var(--gray);margin-top:6px;">A secure, welcoming environment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Begin Your Child's Journey With Us</h2>
+    <p>Admissions for the academic year 2025–26 are now open. Secure your child's seat today.</p>
+    <div class="cta-btns">
+      <a class="btn btn-primary" onclick="showPage('admissions')">📋 Apply for Admission</a>
+      <a class="btn btn-outline" onclick="showPage('contact')">📞 Contact Us</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">R</div>
+        <h3>Raman Public School</h3>
+        <p>English Medium school dedicated to shaping young minds through quality education, strong values, and a disciplined learning environment in Sahjanwa, U.P.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a onclick="showPage('home')">Home</a></li>
+          <li><a onclick="showPage('about')">About Us</a></li>
+          <li><a onclick="showPage('academics')">Academics</a></li>
+          <li><a onclick="showPage('faculty')">Faculty</a></li>
+          <li><a onclick="showPage('admissions')">Admissions</a></li>
+          <li><a onclick="showPage('gallery')">Gallery</a></li>
+          <li><a onclick="showPage('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Academics</h4>
+        <ul>
+          <li><a onclick="showPage('academics')">Curriculum</a></li>
+          <li><a onclick="showPage('academics')">Co-Curricular</a></li>
+          <li><a onclick="showPage('faculty')">Our Teachers</a></li>
+          <li><a onclick="showPage('facilities')">Facilities</a></li>
+          <li><a onclick="showPage('admissions')">Admission Process</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <span class="icon">📍</span>
+          <p>Q668+JJJ, Kesawpur Road, Ghanshyam Nagar, Sahjanwa, U.P. – 273209</p>
+        </div>
+        <div class="footer-contact-item">
+          <span class="icon">📞</span>
+          <p><a href="tel:08174089013" style="color:rgba(255,255,255,0.7); text-decoration:none;">081740 89013</a></p>
+        </div>
+        <div class="footer-contact-item">
+          <span class="icon">🕐</span>
+          <p>Mon–Sat: 8:00 AM – 3:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Raman Public School. All Rights Reserved. | Sahjanwa, Uttar Pradesh</p>
+      <p>English Medium School | Affiliated with UP Board</p>
+    </div>
+  </footer>
+
+</div>
+
+<!-- ═══════════════════════════════════════
+     ABOUT PAGE
+═══════════════════════════════════════ -->
+<div class="page" id="page-about">
+  <div class="page-hero" style="padding-top:120px;">
+    <div class="breadcrumb"><a onclick="showPage('home')">Home</a><span>›</span> About Us</div>
+    <h1>About Raman Public School</h1>
+    <p>Our Story, Vision, Mission & Values</p>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <span class="section-label">About Our School</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Building Futures Since Our Founding</h2>
+          <p style="color:var(--text-light); font-size:15px; line-height:1.85; margin-bottom:20px;">
+            Raman Public School is a general education English medium institution located in the heart of Sahjanwa, Uttar Pradesh. Established with a vision to provide quality education to children of the region, our school has grown into a trusted institution for families across Ghanshyam Nagar and surrounding areas.
+          </p>
+          <p style="color:var(--text-light); font-size:15px; line-height:1.85; margin-bottom:28px;">
+            Our aim is to provide a strong academic foundation while instilling discipline, responsibility, and confidence in every student. We focus on nurturing students intellectually, socially, and morally to prepare them for future challenges.
+          </p>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+            <div style="background:var(--off-white); border-radius:var(--radius); padding:20px; border-left:4px solid var(--blue); text-align:center;">
+              <div style="font-size:1.8rem;font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);">10+</div>
+              <div style="font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:1px;">Years of Excellence</div>
+            </div>
+            <div style="background:var(--off-white); border-radius:var(--radius); padding:20px; border-left:4px solid var(--green); text-align:center;">
+              <div style="font-size:1.8rem;font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);">500+</div>
+              <div style="font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:1px;">Students Shaped</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-img-wrap">
+          <img src="/mnt/user-data/uploads/1000055309.png" alt="Raman Public School">
+          <div class="about-badge-overlay"><span>English</span>Medium School</div>
+        </div>
+      </div>
+
+      <!-- Vision & Mission -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:60px;">
+        <div style="background:linear-gradient(135deg,var(--navy),var(--blue)); border-radius:var(--radius-lg); padding:40px; color:white;">
+          <div style="font-size:2.5rem;margin-bottom:16px;">🎯</div>
+          <h3 style="font-size:1.4rem;margin-bottom:14px;color:var(--accent);">Our Vision</h3>
+          <p style="color:rgba(255,255,255,0.85);font-size:15px;line-height:1.85;">
+            To create responsible, confident, and knowledgeable individuals who contribute positively to society and make a meaningful difference in the world around them.
+          </p>
+        </div>
+        <div style="background:var(--off-white); border-radius:var(--radius-lg); padding:40px; border:2px solid var(--border);">
+          <div style="font-size:2.5rem;margin-bottom:16px;">🚀</div>
+          <h3 style="font-size:1.4rem;margin-bottom:14px;color:var(--navy);">Our Mission</h3>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+            <li style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--text-light);">
+              <span style="color:var(--green-dark);font-weight:700;flex-shrink:0;">✓</span>
+              Provide quality education at an affordable level
+            </li>
+            <li style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--text-light);">
+              <span style="color:var(--green-dark);font-weight:700;flex-shrink:0;">✓</span>
+              Encourage critical thinking and creativity
+            </li>
+            <li style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--text-light);">
+              <span style="color:var(--green-dark);font-weight:700;flex-shrink:0;">✓</span>
+              Promote discipline, respect, and integrity
+            </li>
+            <li style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--text-light);">
+              <span style="color:var(--green-dark);font-weight:700;flex-shrink:0;">✓</span>
+              Support overall student development
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Principal's Message -->
+      <div class="principal-card">
+        <div class="principal-avatar">👨‍💼</div>
+        <div>
+          <h3 style="color:var(--accent);font-size:1.2rem;margin-bottom:16px;">Principal's Message</h3>
+          <p>"At Raman Public School, we believe that every child has the potential to succeed. Our dedicated faculty and structured curriculum ensure that students receive guidance, motivation, and the right values to grow into responsible citizens. We are committed to creating an environment where every student feels valued, inspired, and empowered to reach their full potential. Together, we build not just scholars, but leaders of tomorrow."</p>
+          <div class="principal-name">— The Principal</div>
+          <div class="principal-title">Raman Public School, Sahjanwa</div>
+        </div>
+      </div>
+
+      <!-- Values -->
+      <div style="margin-top:60px;">
+        <span class="section-label">What We Stand For</span>
+        <div class="divider"></div>
+        <h2 class="section-title">Our Core Values</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <span class="value-icon">⚖️</span>
+            <h3>Discipline</h3>
+            <p>Structured routines, punctuality, and respectful behavior form the backbone of our school culture.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-icon">🏆</span>
+            <h3>Excellence</h3>
+            <p>We encourage students to strive for their personal best in all academic and non-academic endeavors.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-icon">🤝</span>
+            <h3>Integrity</h3>
+            <p>Honesty, transparency, and ethical behavior are values we nurture from an early age.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-icon">📖</span>
+            <h3>Knowledge</h3>
+            <p>We foster a love for learning, curiosity, and a growth mindset in every student.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Be a Part of Our School Family</h2>
+    <p>Join hundreds of students who have begun their journey of excellence at Raman Public School.</p>
+    <div class="cta-btns">
+      <a class="btn btn-primary" onclick="showPage('admissions')">📋 Apply Now</a>
+      <a class="btn btn-outline" onclick="showPage('contact')">📞 Get in Touch</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="nav-logo">R</div><h3>Raman Public School</h3><p>Shaping Young Minds for a Brighter Future since our founding in Sahjanwa, Uttar Pradesh.</p></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('academics')">Academics</a></li><li><a onclick="showPage('admissions')">Admissions</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Our School</h4><ul><li><a onclick="showPage('faculty')">Faculty</a></li><li><a onclick="showPage('facilities')">Facilities</a></li><li><a onclick="showPage('gallery')">Gallery</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><span class="icon">📍</span><p>Kesawpur Road, Ghanshyam Nagar, Sahjanwa, U.P. – 273209</p></div><div class="footer-contact-item"><span class="icon">📞</span><p>081740 89013</p></div></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Raman Public School. All Rights Reserved.</p><p>English Medium School | Sahjanwa, U.P.</p></div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════════════
+     ACADEMICS PAGE
+═══════════════════════════════════════ -->
+<div class="page" id="page-academics">
+  <div class="page-hero" style="padding-top:120px;">
+    <div class="breadcrumb"><a onclick="showPage('home')">Home</a><span>›</span> Academics</div>
+    <h1>Academic Excellence</h1>
+    <p>A curriculum designed to inspire learning, curiosity, and success</p>
+  </div>
+
+  <section>
+    <div class="container">
+      <span class="section-label">Classes We Offer</span>
+      <div class="divider"></div>
+      <h2 class="section-title">From Nursery to Class XII</h2>
+      <p style="color:var(--text-light); font-size:15px; margin-bottom:32px; max-width:600px;">We provide structured education from Pre-Primary through Secondary levels, ensuring seamless academic progression for every student.</p>
+      <div class="classes-grid">
+        <div class="class-badge"><span>Pre-Primary</span><strong>Nursery</strong></div>
+        <div class="class-badge"><span>Pre-Primary</span><strong>LKG</strong></div>
+        <div class="class-badge"><span>Pre-Primary</span><strong>UKG</strong></div>
+        <div class="class-badge"><span>Primary</span><strong>Class I</strong></div>
+        <div class="class-badge"><span>Primary</span><strong>Class II</strong></div>
+        <div class="class-badge"><span>Primary</span><strong>Class III</strong></div>
+        <div class="class-badge"><span>Primary</span><strong>Class IV</strong></div>
+        <div class="class-badge"><span>Primary</span><strong>Class V</strong></div>
+        <div class="class-badge"><span>Middle</span><strong>Class VI</strong></div>
+        <div class="class-badge"><span>Middle</span><strong>Class VII</strong></div>
+        <div class="class-badge"><span>Middle</span><strong>Class VIII</strong></div>
+        <div class="class-badge"><span>Secondary</span><strong>Class IX–X</strong></div>
+      </div>
+
+      <!-- Curriculum -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:50px; margin-top:60px; align-items:start;">
+        <div>
+          <span class="section-label">Curriculum Overview</span>
+          <div class="divider"></div>
+          <h2 class="section-title" style="font-size:1.8rem;">Our Academic Program</h2>
+          <p style="color:var(--text-light); font-size:14.5px; margin-bottom:28px; line-height:1.85;">Our academic program is designed to build strong fundamentals and promote conceptual clarity. We follow a student-friendly approach that makes learning engaging and effective.</p>
+          <div class="features-list">
+            <div class="feature-item">
+              <span class="fi-icon">📝</span>
+              <div>
+                <h4>Structured Syllabus</h4>
+                <p>Carefully designed NCERT-aligned curriculum that builds knowledge progressively through each grade.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="fi-icon">📊</span>
+              <div>
+                <h4>Regular Assessments</h4>
+                <p>Periodic tests, unit tests, and formative assessments to track student progress and understanding.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="fi-icon">🎯</span>
+              <div>
+                <h4>Student-Friendly Teaching</h4>
+                <p>Interactive teaching methods that encourage participation, questions, and creative problem-solving.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="fi-icon">💡</span>
+              <div>
+                <h4>Conceptual Clarity</h4>
+                <p>Focus on deep understanding of concepts rather than rote memorization for lasting knowledge.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--off-white); border-radius:var(--radius-lg); padding:40px; border:1px solid var(--border);">
+          <h3 style="font-size:1.3rem;color:var(--navy);margin-bottom:24px;">Core Subjects Taught</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;">
+            <span style="background:white;border:1.5px solid var(--border);border-radius:50px;padding:8px 18px;font-size:13px;color:var(--text);">📚 English</span>
+            <span style="background:white;border:1.5px solid var(--border);border-radius:50px;padding:8px 18px;font-size:13px;color:var(--text);">🔢 Mathematics</span>
+            <span style="background:white;border:1.5px solid var(--border);border-radius:50px;padding:8px 18px;font-size:13px;color:var(--text);">🔬 Science</span>
+            <span style="background:white;border:1.5px solid var(--border);border-radius:50px;padding:8px 18px;font-size:13px;color:var(--text);">🌍 Social Studies</span>
+            <span style="background:white;border:1.5px solid var(--border);border-radius:50px;padding:8px 18px;font-size:13px;color:var(--text);">🗣️ Hindi</span>
+            <span style="background:white;border:1.5px solid var(--border);border-radius:50px;padding:8px 18px;font-size:13px;color:var(--text);">🧮 Computer</span>
+            <span style="background:white;border:1.5px solid var(--border);border-radius:50px;padding:8px 18px;font-size:13px;color:var(--text);">🎨 Art & Craft</span>
+            <span style="background:white;border:1.5px solid var(--border);border-radius:50px;padding:8px 18px;font-size:13px;color:var(--text);">⚽ Physical Ed.</span>
+            <span style="background:white;border:1.5px solid var(--border);border-radius:50px;padding:8px 18px;font-size:13px;color:var(--text);">🕊️ Moral Values</span>
+            <span style="background:white;border:1.5px solid var(--border);border-radius:50px;padding:8px 18px;font-size:13px;color:var(--text);">🧬 General Knowledge</span>
+          </div>
+          <div style="margin-top:28px; background:linear-gradient(135deg,var(--navy),var(--blue)); border-radius:var(--radius); padding:24px; color:white;">
+            <h4 style="color:var(--accent);margin-bottom:10px;">Teaching Methodology</h4>
+            <p style="font-size:13.5px;color:rgba(255,255,255,0.85);line-height:1.8;">We use a blend of traditional and modern teaching approaches — including activity-based learning, visual aids, group discussions, and regular revision sessions — to ensure every student grasps concepts thoroughly.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Co-curricular -->
+      <div style="margin-top:70px;">
+        <span class="section-label">Beyond the Classroom</span>
+        <div class="divider"></div>
+        <h2 class="section-title">Co-Curricular & Extra Activities</h2>
+        <p style="color:var(--text-light); font-size:15px; max-width:600px; margin-bottom:10px;">We believe in the holistic development of every student through a range of activities that build confidence, teamwork, and leadership skills.</p>
+        <div class="activities-grid">
+          <div class="activity-card">
+            <div class="icon">🎭</div>
+            <h3>Cultural Activities</h3>
+            <p>Drama, dance, music, and cultural programs that celebrate diversity and build confidence in students.</p>
+          </div>
+          <div class="activity-card">
+            <div class="icon">⚽</div>
+            <h3>Sports & Physical Education</h3>
+            <p>Cricket, football, kabaddi, and athletics to promote fitness, teamwork, and sportsmanship.</p>
+          </div>
+          <div class="activity-card">
+            <div class="icon">🏆</div>
+            <h3>Classroom Competitions</h3>
+            <p>Quiz contests, essay writing, drawing competitions, and spelling bees to encourage healthy competition.</p>
+          </div>
+          <div class="activity-card">
+            <div class="icon">🕊️</div>
+            <h3>Moral Education</h3>
+            <p>Value-based sessions on honesty, compassion, civic responsibility, and national pride.</p>
+          </div>
+          <div class="activity-card">
+            <div class="icon">📖</div>
+            <h3>Library & Reading</h3>
+            <p>Guided reading programs and library sessions to cultivate a love for books and knowledge.</p>
+          </div>
+          <div class="activity-card">
+            <div class="icon">🎨</div>
+            <h3>Art & Creativity</h3>
+            <p>Drawing, painting, and craft activities that nurture creativity and fine motor skills.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Ready to Enroll Your Child?</h2>
+    <p>Give your child the academic foundation they deserve at Raman Public School.</p>
+    <div class="cta-btns">
+      <a class="btn btn-primary" onclick="showPage('admissions')">📋 Apply Now</a>
+      <a class="btn btn-outline" onclick="showPage('contact')">📞 Contact Us</a>
+    </div>
+  </section>
+
+  <footer><div class="footer-grid"><div class="footer-brand"><div class="nav-logo">R</div><h3>Raman Public School</h3><p>Shaping Young Minds for a Brighter Future.</p></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('academics')">Academics</a></li><li><a onclick="showPage('admissions')">Admissions</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div><div class="footer-col"><h4>Explore</h4><ul><li><a onclick="showPage('faculty')">Faculty</a></li><li><a onclick="showPage('facilities')">Facilities</a></li><li><a onclick="showPage('gallery')">Gallery</a></li></ul></div><div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><span class="icon">📍</span><p>Kesawpur Road, Ghanshyam Nagar, Sahjanwa, U.P. – 273209</p></div><div class="footer-contact-item"><span class="icon">📞</span><p>081740 89013</p></div></div></div><div class="footer-bottom"><p>© 2025 Raman Public School. All Rights Reserved.</p></div></footer>
+</div>
+
+<!-- ═══════════════════════════════════════
+     ADMISSIONS PAGE
+═══════════════════════════════════════ -->
+<div class="page" id="page-admissions">
+  <div class="page-hero" style="padding-top:120px;">
+    <div class="breadcrumb"><a onclick="showPage('home')">Home</a><span>›</span> Admissions</div>
+    <h1>Admissions 2025–26</h1>
+    <p>Limited seats available — Start your child's journey today</p>
+  </div>
+
+  <section style="background:var(--off-white);">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:56px;">
+        <span class="section-label">How to Apply</span>
+        <div class="divider" style="margin:12px auto 16px;"></div>
+        <h2 class="section-title">Simple 4-Step Admission Process</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <h3>Visit / Contact</h3>
+          <p>Visit the school or call us at 081740 89013 to enquire about available seats and classes.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <h3>Fill Enquiry Form</h3>
+          <p>Complete the admission enquiry form online or at school with student and parent details.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <h3>Submit Documents</h3>
+          <p>Bring all required documents to the school for verification and record submission.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <h3>Confirmation</h3>
+          <p>Receive admission confirmation and welcome to the Raman Public School family!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start;">
+        <div>
+          <span class="section-label">Requirements</span>
+          <div class="divider"></div>
+          <h2 class="section-title" style="font-size:1.8rem;">Documents Required</h2>
+          <p style="color:var(--text-light);font-size:14.5px;margin-bottom:28px;">Please bring original documents along with two photocopies at the time of admission.</p>
+          <div class="docs-grid">
+            <div class="doc-item">
+              <div class="doc-icon">📜</div>
+              <div><strong>Birth Certificate</strong><span>Age verification document</span></div>
+            </div>
+            <div class="doc-item">
+              <div class="doc-icon">📋</div>
+              <div><strong>Previous Report Card</strong><span>Last class mark sheet</span></div>
+            </div>
+            <div class="doc-item">
+              <div class="doc-icon">📸</div>
+              <div><strong>Passport Photos</strong><span>4 recent photographs</span></div>
+            </div>
+            <div class="doc-item">
+              <div class="doc-icon">🪪</div>
+              <div><strong>Aadhaar Card</strong><span>Student/Parent ID (if available)</span></div>
+            </div>
+            <div class="doc-item">
+              <div class="doc-icon">🏠</div>
+              <div><strong>Address Proof</strong><span>Residential document</span></div>
+            </div>
+            <div class="doc-item">
+              <div class="doc-icon">🔄</div>
+              <div><strong>Transfer Certificate</strong><span>TC from previous school (if applicable)</span></div>
+            </div>
+          </div>
+
+          <div style="background:linear-gradient(135deg,rgba(46,204,113,0.1),rgba(39,174,96,0.05)); border:2px solid rgba(46,204,113,0.3); border-radius:var(--radius); padding:24px; margin-top:28px;">
+            <h4 style="color:var(--green-dark);margin-bottom:10px;">📌 Eligibility</h4>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+              <li style="font-size:14px;color:var(--text-light);">✓ Age appropriate for the class applied</li>
+              <li style="font-size:14px;color:var(--text-light);">✓ Passed previous class (for Class I and above)</li>
+              <li style="font-size:14px;color:var(--text-light);">✓ All required documents complete</li>
+              <li style="font-size:14px;color:var(--text-light);">✓ Seat availability in applied class</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Enquiry Form -->
+        <div class="form-card">
+          <h2>Admission Enquiry</h2>
+          <p>Fill the form below and we'll get back to you within 24 hours.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Student's Name *</label>
+              <input type="text" placeholder="Full name">
+            </div>
+            <div class="form-group">
+              <label>Class Applying For *</label>
+              <select>
+                <option value="">Select Class</option>
+                <option>Nursery</option>
+                <option>LKG</option>
+                <option>UKG</option>
+                <option>Class I</option>
+                <option>Class II</option>
+                <option>Class III</option>
+                <option>Class IV</option>
+                <option>Class V</option>
+                <option>Class VI</option>
+                <option>Class VII</option>
+                <option>Class VIII</option>
+                <option>Class IX</option>
+                <option>Class X</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Parent's Name *</label>
+              <input type="text" placeholder="Father/Mother name">
+            </div>
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" placeholder="10-digit mobile number">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Address</label>
+            <input type="text" placeholder="Your area / village">
+          </div>
+          <div class="form-group">
+            <label>Date of Birth of Student</label>
+            <input type="date">
+          </div>
+          <div class="form-group">
+            <label>Any Message / Query</label>
+            <textarea rows="3" placeholder="Your question or message..."></textarea>
+          </div>
+          <button class="btn btn-blue" onclick="handleAdmission()" style="width:100%; justify-content:center; border:none;">Submit Enquiry →</button>
+          <p style="font-size:12px;color:var(--gray);text-align:center;margin-top:14px;">Or call directly: <a href="tel:08174089013" style="color:var(--blue);font-weight:600;">081740 89013</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="footer-grid"><div class="footer-brand"><div class="nav-logo">R</div><h3>Raman Public School</h3><p>Shaping Young Minds for a Brighter Future.</p></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('academics')">Academics</a></li><li><a onclick="showPage('admissions')">Admissions</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div><div class="footer-col"><h4>Explore</h4><ul><li><a onclick="showPage('faculty')">Faculty</a></li><li><a onclick="showPage('facilities')">Facilities</a></li><li><a onclick="showPage('gallery')">Gallery</a></li></ul></div><div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><span class="icon">📍</span><p>Kesawpur Road, Ghanshyam Nagar, Sahjanwa, U.P. – 273209</p></div><div class="footer-contact-item"><span class="icon">📞</span><p>081740 89013</p></div></div></div><div class="footer-bottom"><p>© 2025 Raman Public School. All Rights Reserved.</p></div></footer>
+</div>
+
+<!-- ═══════════════════════════════════════
+     FACULTY PAGE
+═══════════════════════════════════════ -->
+<div class="page" id="page-faculty">
+  <div class="page-hero" style="padding-top:120px;">
+    <div class="breadcrumb"><a onclick="showPage('home')">Home</a><span>›</span> Faculty</div>
+    <h1>Our Faculty</h1>
+    <p>Dedicated, qualified, and passionate educators shaping tomorrow's leaders</p>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="faculty-intro">
+        <div class="faculty-intro-icon">👩‍🏫</div>
+        <div>
+          <h2 style="color:var(--accent);font-size:1.6rem;margin-bottom:14px;">The Heart of Raman Public School</h2>
+          <p>Our teachers are well-qualified, experienced, and passionate about the art of teaching. Each member of our faculty is carefully selected for their subject expertise, teaching ability, and dedication to student welfare. They focus on individual student attention, maintaining discipline, and ensuring concept clarity for every child in their classroom.</p>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-bottom:40px;">
+        <span class="section-label">Meet Our Team</span>
+        <div class="divider" style="margin:12px auto 16px;"></div>
+        <h2 class="section-title">Experienced & Dedicated Educators</h2>
+      </div>
+
+      <div class="teacher-grid">
+        <div class="teacher-card">
+          <div class="teacher-avatar">👨‍🏫</div>
+          <h3>Senior Teacher</h3>
+          <div class="subject">Mathematics & Science</div>
+          <p>Highly experienced in making complex mathematical and scientific concepts simple and understandable for students.</p>
+        </div>
+        <div class="teacher-card">
+          <div class="teacher-avatar">👩‍🏫</div>
+          <h3>Class Teacher</h3>
+          <div class="subject">English Language</div>
+          <p>Specializes in building strong English communication, reading, and writing skills from primary level onwards.</p>
+        </div>
+        <div class="teacher-card">
+          <div class="teacher-avatar">👨‍🏫</div>
+          <h3>Subject Expert</h3>
+          <div class="subject">Hindi & Social Studies</div>
+          <p>Dedicated to nurturing love for the Hindi language and instilling awareness of social values and civic responsibility.</p>
+        </div>
+        <div class="teacher-card">
+          <div class="teacher-avatar">👩‍🏫</div>
+          <h3>Primary Teacher</h3>
+          <div class="subject">Pre-Primary & LKG/UKG</div>
+          <p>Trained in early childhood education with a warm, nurturing approach to guide the youngest learners.</p>
+        </div>
+        <div class="teacher-card">
+          <div class="teacher-avatar">👨‍🏫</div>
+          <h3>Physical Education</h3>
+          <div class="subject">Sports & Fitness</div>
+          <p>Promotes physical wellness, team spirit, and sportsmanship through organized sports and fitness activities.</p>
+        </div>
+        <div class="teacher-card">
+          <div class="teacher-avatar">👩‍🏫</div>
+          <h3>Art & Activity</h3>
+          <div class="subject">Drawing & Craft</div>
+          <p>Fosters creativity, fine motor skills, and artistic expression through engaging hands-on activities and projects.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:70px;">
+        <span class="section-label">Teaching Quality</span>
+        <div class="divider"></div>
+        <h2 class="section-title">What Makes Our Faculty Special</h2>
+        <div class="quality-pillars">
+          <div class="pillar">
+            <div class="p-icon">🎯</div>
+            <h3>Individual Attention</h3>
+            <p>Our teachers ensure every student receives personal guidance, addressing individual learning needs and challenges effectively.</p>
+          </div>
+          <div class="pillar">
+            <div class="p-icon">📚</div>
+            <h3>Concept Clarity</h3>
+            <p>We emphasize deep conceptual understanding over rote memorization, preparing students for real-world application of knowledge.</p>
+          </div>
+          <div class="pillar">
+            <div class="p-icon">❤️</div>
+            <h3>Student Welfare</h3>
+            <p>Beyond academics, our teachers take genuine interest in students' emotional wellbeing, motivation, and overall growth.</p>
+          </div>
+          <div class="pillar">
+            <div class="p-icon">🔄</div>
+            <h3>Continuous Learning</h3>
+            <p>Our faculty regularly updates their skills with modern teaching techniques and educational best practices.</p>
+          </div>
+          <div class="pillar">
+            <div class="p-icon">⚖️</div>
+            <h3>Fair & Encouraging</h3>
+            <p>Creating a positive, inclusive classroom environment where every child feels valued and encouraged to participate.</p>
+          </div>
+          <div class="pillar">
+            <div class="p-icon">🤝</div>
+            <h3>Parent Cooperation</h3>
+            <p>Regular communication with parents to track student progress and address concerns in a collaborative manner.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Our Teachers Are Ready to Guide Your Child</h2>
+    <p>Enroll today and give your child the benefit of experienced, caring educators.</p>
+    <div class="cta-btns">
+      <a class="btn btn-primary" onclick="showPage('admissions')">📋 Apply Now</a>
+      <a class="btn btn-outline" onclick="showPage('contact')">📞 Contact Us</a>
+    </div>
+  </section>
+
+  <footer><div class="footer-grid"><div class="footer-brand"><div class="nav-logo">R</div><h3>Raman Public School</h3><p>Shaping Young Minds for a Brighter Future.</p></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('academics')">Academics</a></li><li><a onclick="showPage('admissions')">Admissions</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div><div class="footer-col"><h4>Explore</h4><ul><li><a onclick="showPage('faculty')">Faculty</a></li><li><a onclick="showPage('facilities')">Facilities</a></li><li><a onclick="showPage('gallery')">Gallery</a></li></ul></div><div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><span class="icon">📍</span><p>Kesawpur Road, Ghanshyam Nagar, Sahjanwa, U.P. – 273209</p></div><div class="footer-contact-item"><span class="icon">📞</span><p>081740 89013</p></div></div></div><div class="footer-bottom"><p>© 2025 Raman Public School. All Rights Reserved.</p></div></footer>
+</div>
+
+<!-- ═══════════════════════════════════════
+     FACILITIES PAGE
+═══════════════════════════════════════ -->
+<div class="page" id="page-facilities">
+  <div class="page-hero" style="padding-top:120px;">
+    <div class="breadcrumb"><a onclick="showPage('home')">Home</a><span>›</span> Facilities</div>
+    <h1>Our Facilities</h1>
+    <p>A safe, clean, and well-equipped campus designed for quality learning</p>
+  </div>
+
+  <section>
+    <div class="container">
+      <div style="text-align:center;margin-bottom:50px;">
+        <span class="section-label">Campus & Infrastructure</span>
+        <div class="divider" style="margin:12px auto 16px;"></div>
+        <h2 class="section-title">Everything Your Child Needs to Thrive</h2>
+        <p class="section-sub" style="margin:0 auto;">We provide a comprehensive set of facilities that support both academic learning and the physical, creative, and social development of our students.</p>
+      </div>
+      <div class="facilities-grid">
+        <div class="facility-card">
+          <div class="facility-icon">🏫</div>
+          <div>
+            <h3>Spacious Classrooms</h3>
+            <p>Well-ventilated, well-lit classrooms equipped with blackboards, furniture, and learning materials. Each room is designed to accommodate optimal class sizes for effective learning and personal teacher attention.</p>
+          </div>
+        </div>
+        <div class="facility-card">
+          <div class="facility-icon">📚</div>
+          <div>
+            <h3>School Library</h3>
+            <p>A well-stocked library containing academic textbooks, reference books, story books, and educational materials across all subjects and grade levels to encourage reading habits and independent research.</p>
+          </div>
+        </div>
+        <div class="facility-card">
+          <div class="facility-icon">⚽</div>
+          <div>
+            <h3>Playground & Sports</h3>
+            <p>A dedicated playground area for physical activities, sports, and outdoor games. Regular PE classes and sports activities help students build fitness, teamwork, and a healthy lifestyle.</p>
+          </div>
+        </div>
+        <div class="facility-card">
+          <div class="facility-icon">🔒</div>
+          <div>
+            <h3>Safe & Secure Campus</h3>
+            <p>Our campus is enclosed with a secure boundary wall and gated entrance, ensuring students are safe throughout the school day. Disciplined environment with responsible supervision at all times.</p>
+          </div>
+        </div>
+        <div class="facility-card">
+          <div class="facility-icon">🚰</div>
+          <div>
+            <h3>Clean Environment</h3>
+            <p>Maintained clean classrooms, corridors, and common areas with proper sanitation facilities for both boys and girls. Hygiene and cleanliness are given high priority on our campus.</p>
+          </div>
+        </div>
+        <div class="facility-card">
+          <div class="facility-icon">🌿</div>
+          <div>
+            <h3>Student-Friendly Campus</h3>
+            <p>A welcoming and nurturing environment where students feel comfortable to learn, play, and express themselves. A campus that truly feels like a second home for every child.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image showcase -->
+      <div style="margin-top:60px; border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-lg);">
+        <img src="/mnt/user-data/uploads/1000055309.png" alt="Raman Public School Campus" style="width:100%; height:400px; object-fit:cover; display:block;">
+      </div>
+      <p style="text-align:center; color:var(--gray); font-size:13.5px; margin-top:16px; font-style:italic;">Main entrance of Raman Public School, Ghanshyam Nagar, Sahjanwa</p>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>See Our Campus In Person</h2>
+    <p>Visit us to experience the Raman Public School environment and talk to our staff about admissions.</p>
+    <div class="cta-btns">
+      <a class="btn btn-primary" onclick="showPage('contact')">📍 Get Directions</a>
+      <a class="btn btn-outline" onclick="showPage('admissions')">📋 Apply Now</a>
+    </div>
+  </section>
+
+  <footer><div class="footer-grid"><div class="footer-brand"><div class="nav-logo">R</div><h3>Raman Public School</h3><p>Shaping Young Minds for a Brighter Future.</p></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('academics')">Academics</a></li><li><a onclick="showPage('admissions')">Admissions</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div><div class="footer-col"><h4>Explore</h4><ul><li><a onclick="showPage('faculty')">Faculty</a></li><li><a onclick="showPage('facilities')">Facilities</a></li><li><a onclick="showPage('gallery')">Gallery</a></li></ul></div><div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><span class="icon">📍</span><p>Kesawpur Road, Ghanshyam Nagar, Sahjanwa, U.P. – 273209</p></div><div class="footer-contact-item"><span class="icon">📞</span><p>081740 89013</p></div></div></div><div class="footer-bottom"><p>© 2025 Raman Public School. All Rights Reserved.</p></div></footer>
+</div>
+
+<!-- ═══════════════════════════════════════
+     GALLERY PAGE
+═══════════════════════════════════════ -->
+<div class="page" id="page-gallery">
+  <div class="page-hero" style="padding-top:120px;">
+    <div class="breadcrumb"><a onclick="showPage('home')">Home</a><span>›</span> Gallery</div>
+    <h1>School Gallery</h1>
+    <p>Moments from our vibrant school life at Raman Public School</p>
+  </div>
+
+  <section>
+    <div class="container">
+      <div style="text-align:center;margin-bottom:40px;">
+        <span class="section-label">Our Memories</span>
+        <div class="divider" style="margin:12px auto 16px;"></div>
+        <h2 class="section-title">Life at Raman Public School</h2>
+        <p style="color:var(--text-light); font-size:15px; max-width:600px; margin:0 auto;">Moments from classrooms, school events, student activities, and celebrations that reflect our vibrant school life.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item large">
+          <img src="/mnt/user-data/uploads/1000055309.png" alt="School Building">
+          <div class="g-label">📍 Main Building & Entrance Gate</div>
+        </div>
+        <div class="gallery-item">
+          <img src="/mnt/user-data/uploads/1000055309.png" alt="School Gate" style="filter:hue-rotate(30deg) brightness(0.9);">
+          <div class="g-label">🏫 School Campus</div>
+        </div>
+        <div class="gallery-item">
+          <img src="/mnt/user-data/uploads/1000055309.png" alt="School Exterior" style="filter:saturate(1.3) brightness(0.85);">
+          <div class="g-label">🎓 Academic Block</div>
+        </div>
+        <div class="gallery-item">
+          <img src="/mnt/user-data/uploads/1000055309.png" alt="School View 2" style="filter:hue-rotate(-15deg) brightness(0.88);">
+          <div class="g-label">📚 Classrooms Wing</div>
+        </div>
+        <div class="gallery-item large">
+          <img src="/mnt/user-data/uploads/1000055309.png" alt="School View Wide" style="filter:contrast(1.1) brightness(0.87); object-position:center 30%;">
+          <div class="g-label">🌅 School in the Morning</div>
+        </div>
+        <div class="gallery-item">
+          <img src="/mnt/user-data/uploads/1000055309.png" alt="School Entrance" style="filter:sepia(0.2) brightness(0.9);">
+          <div class="g-label">🔑 Main Entrance</div>
+        </div>
+      </div>
+
+      <!-- Photo categories -->
+      <div style="margin-top:60px; padding:40px; background:var(--off-white); border-radius:var(--radius-lg); border:1px solid var(--border);">
+        <h3 style="font-size:1.3rem;color:var(--navy);margin-bottom:8px;font-family:'Playfair Display',serif;">Coming Soon</h3>
+        <p style="color:var(--text-light);font-size:14.5px;margin-bottom:24px;">We are continuously updating our gallery with photos from school events, activities, and celebrations. Check back for more!</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+          <span style="background:white;border:1.5px solid var(--border);border-radius:50px;padding:8px 18px;font-size:13px;color:var(--text);">🎭 Cultural Events</span>
+          <span style="background:white;border:1.5px solid var(--border);border-radius:50px;padding:8px 18px;font-size:13px;color:var(--text);">⚽ Sports Day</span>
+          <span style="background:white;border:1.5px solid var(--border);border-radius:50px;padding:8px 18px;font-size:13px;color:var(--text);">🎊 Annual Day</span>
+          <span style="background:white;border:1.5px solid var(--border);border-radius:50px;padding:8px 18px;font-size:13px;color:var(--text);">📚 Classroom Activities</span>
+          <span style="background:white;border:1.5px solid var(--border);border-radius:50px;padding:8px 18px;font-size:13px;color:var(--text);">🏆 Prize Distribution</span>
+          <span style="background:white;border:1.5px solid var(--border);border-radius:50px;padding:8px 18px;font-size:13px;color:var(--text);">🌿 Republic Day</span>
+          <span style="background:white;border:1.5px solid var(--border);border-radius:50px;padding:8px 18px;font-size:13px;color:var(--text);">🎨 Art Exhibition</span>
+          <span style="background:white;border:1.5px solid var(--border);border-radius:50px;padding:8px 18px;font-size:13px;color:var(--text);">🎵 Competitions</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="footer-grid"><div class="footer-brand"><div class="nav-logo">R</div><h3>Raman Public School</h3><p>Shaping Young Minds for a Brighter Future.</p></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('academics')">Academics</a></li><li><a onclick="showPage('admissions')">Admissions</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div><div class="footer-col"><h4>Explore</h4><ul><li><a onclick="showPage('faculty')">Faculty</a></li><li><a onclick="showPage('facilities')">Facilities</a></li><li><a onclick="showPage('gallery')">Gallery</a></li></ul></div><div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><span class="icon">📍</span><p>Kesawpur Road, Ghanshyam Nagar, Sahjanwa, U.P. – 273209</p></div><div class="footer-contact-item"><span class="icon">📞</span><p>081740 89013</p></div></div></div><div class="footer-bottom"><p>© 2025 Raman Public School. All Rights Reserved.</p></div></footer>
+</div>
+
+<!-- ═══════════════════════════════════════
+     CONTACT PAGE
+═══════════════════════════════════════ -->
+<div class="page" id="page-contact">
+  <div class="page-hero" style="padding-top:120px;">
+    <div class="breadcrumb"><a onclick="showPage('home')">Home</a><span>›</span> Contact Us</div>
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you — reach out anytime</p>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <div class="contact-info-card">
+            <h2>Get in Touch</h2>
+            <p class="sub">We're here to answer your questions about admissions, academics, or anything else.</p>
+
+            <div class="ci-item">
+              <div class="ci-icon">📍</div>
+              <div>
+                <strong>Address</strong>
+                <p>Q668+JJJ, Kesawpur Road,<br>Ghanshyam Nagar, Ghanshyam Nagri,<br>Sahjanwa, Uttar Pradesh – 273209</p>
+              </div>
+            </div>
+
+            <div class="ci-item">
+              <div class="ci-icon">📞</div>
+              <div>
+                <strong>Phone</strong>
+                <p><a href="tel:08174089013">081740 89013</a></p>
+              </div>
+            </div>
+
+            <div class="ci-item">
+              <div class="ci-icon">🕐</div>
+              <div>
+                <strong>School Hours</strong>
+                <p>Monday to Saturday<br>8:00 AM – 3:00 PM<br><span style="font-size:12px;color:rgba(255,255,255,0.55);">Office: 9:00 AM – 2:00 PM</span></p>
+              </div>
+            </div>
+
+            <div class="ci-item">
+              <div class="ci-icon">✉️</div>
+              <div>
+                <strong>Admissions</strong>
+                <p>For admission enquiries,<br>call or visit the school directly.<br>Admissions Open for 2025–26</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="map-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.2!2d83.219!3d26.752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3991d5e8c7e7c4a9%3A0x1234567890abcdef!2sRaman%20Public%20School%2C%20Sahjanwa%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin"
+              allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <p style="font-size:12px;color:var(--gray);margin-top:8px;text-align:center;">📍 Q668+JJJ, Kesawpur Road, Ghanshyam Nagar, Sahjanwa, UP 273209</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div>
+          <div class="form-card" style="margin:0;">
+            <h2>Send Us a Message</h2>
+            <p>Fill in your details and we'll respond promptly during school hours.</p>
+            <div class="form-group">
+              <label>Your Name *</label>
+              <input type="text" placeholder="Full name">
+            </div>
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" placeholder="10-digit mobile number">
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <select>
+                <option>Admission Enquiry</option>
+                <option>Academic Information</option>
+                <option>Fee Structure</option>
+                <option>Facilities</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Your Message *</label>
+              <textarea rows="5" placeholder="Write your message or question here..."></textarea>
+            </div>
+            <button class="btn btn-blue" onclick="handleContact()" style="width:100%; justify-content:center; border:none; font-size:15px;">Send Message →</button>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:20px;">
+              <a href="tel:08174089013" class="btn btn-outline" style="justify-content:center; color:var(--blue); border-color:var(--blue);">📞 Call Now</a>
+              <a href="https://wa.me/918174089013" target="_blank" class="btn btn-green" style="justify-content:center;">💬 WhatsApp</a>
+            </div>
+          </div>
+
+          <!-- How to Find Us -->
+          <div style="background:var(--off-white); border-radius:var(--radius-lg); padding:32px; margin-top:24px; border:1px solid var(--border);">
+            <h3 style="font-size:1.1rem;color:var(--navy);margin-bottom:16px;">📌 How to Find Us</h3>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div style="display:flex;gap:12px;align-items:flex-start;">
+                <span style="width:24px;height:24px;border-radius:50%;background:var(--blue);color:white;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;">1</span>
+                <p style="font-size:13.5px;color:var(--text-light);">Located on Kesawpur Road, near Ghanshyam Nagar area in Sahjanwa.</p>
+              </div>
+              <div style="display:flex;gap:12px;align-items:flex-start;">
+                <span style="width:24px;height:24px;border-radius:50%;background:var(--blue);color:white;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;">2</span>
+                <p style="font-size:13.5px;color:var(--text-light);">Easily accessible from Sahjanwa main road — look for the yellow school sign board.</p>
+              </div>
+              <div style="display:flex;gap:12px;align-items:flex-start;">
+                <span style="width:24px;height:24px;border-radius:50%;background:var(--blue);color:white;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;">3</span>
+                <p style="font-size:13.5px;color:var(--text-light);">Search "Raman Public School Sahjanwa" on Google Maps for turn-by-turn directions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="footer-grid"><div class="footer-brand"><div class="nav-logo">R</div><h3>Raman Public School</h3><p>Shaping Young Minds for a Brighter Future.</p></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('academics')">Academics</a></li><li><a onclick="showPage('admissions')">Admissions</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div><div class="footer-col"><h4>Explore</h4><ul><li><a onclick="showPage('faculty')">Faculty</a></li><li><a onclick="showPage('facilities')">Facilities</a></li><li><a onclick="showPage('gallery')">Gallery</a></li></ul></div><div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><span class="icon">📍</span><p>Kesawpur Road, Ghanshyam Nagar, Sahjanwa, U.P. – 273209</p></div><div class="footer-contact-item"><span class="icon">📞</span><p>081740 89013</p></div></div></div><div class="footer-bottom"><p>© 2025 Raman Public School. All Rights Reserved.</p></div></footer>
+</div>
+
+<!-- ─── JAVASCRIPT ─── -->
+<script>
+  const pages = ['home','about','academics','admissions','faculty','facilities','gallery','contact'];
+
+  function showPage(id) {
+    pages.forEach(p => {
+      const pg = document.getElementById('page-' + p);
+      const nav = document.getElementById('nav-' + p);
+      if (pg) pg.classList.remove('active');
+      if (nav) nav.classList.remove('active');
+    });
+    const target = document.getElementById('page-' + id);
+    const navTarget = document.getElementById('nav-' + id);
+    if (target) { target.classList.add('active'); window.scrollTo({top: 0, behavior: 'smooth'}); }
+    if (navTarget) navTarget.classList.add('active');
+  }
+
+  function toggleMobile() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  function handleAdmission() {
+    alert('✅ Thank you! Your admission enquiry has been submitted.\n\nWe will contact you within 24 hours.\n\nFor urgent queries, call us at: 081740 89013');
+  }
+
+  function handleContact() {
+    alert('✅ Thank you for reaching out!\n\nYour message has been received. We will respond within 24 hours.\n\nFor urgent queries, please call: 081740 89013');
+  }
+
+  // Close mobile menu on outside click
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobileMenu');
+    const ham = document.querySelector('.hamburger');
+    if (!menu.contains(e.target) && !ham.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+
+  // Adjust body padding for notice bar + nav
+  document.body.style.paddingTop = '0';
+
+  // Counter animation for stats
+  function animateCounters() {
+    const counters = document.querySelectorAll('.stat-num');
+    counters.forEach(c => {
+      const text = c.textContent;
+      const num = parseInt(text.replace(/\D/g,''));
+      const suffix = text.replace(/[0-9]/g,'');
+      let current = 0;
+      const step = Math.ceil(num / 40);
+      const timer = setInterval(() => {
+        current = Math.min(current + step, num);
+        c.textContent = current + suffix;
+        if (current >= num) clearInterval(timer);
+      }, 30);
+    });
+  }
+
+  // Run counter when home page loads
+  setTimeout(animateCounters, 500);
+</script>
+</body>
+</html>
